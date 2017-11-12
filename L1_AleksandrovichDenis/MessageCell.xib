@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MessageCell" id="gTV-IL-0wX" customClass="MessageCell" customModule="L1_AleksandrovichDenis" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="134"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbo-44-YVF">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="134"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameSender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2h-ZI-zLm">
+                                <rect key="frame" x="15" y="15" width="370" height="14.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.25259417295455933" green="0.52078092098236084" blue="0.95461016893386841" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description Description  Description  Description  Description  Description  Description Description  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-S4-rP4">
+                                <rect key="frame" x="15" y="44.5" width="370" height="74.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="SyB-S4-rP4" firstAttribute="leading" secondItem="g2h-ZI-zLm" secondAttribute="leading" id="5EI-8D-x2W"/>
+                            <constraint firstAttribute="width" constant="400" id="5OR-yf-evN"/>
+                            <constraint firstAttribute="bottom" secondItem="SyB-S4-rP4" secondAttribute="bottom" constant="15" id="8Y0-Vu-2Gn"/>
+                            <constraint firstAttribute="trailing" secondItem="SyB-S4-rP4" secondAttribute="trailing" constant="15" id="FfK-Nh-sVr"/>
+                            <constraint firstItem="SyB-S4-rP4" firstAttribute="top" secondItem="g2h-ZI-zLm" secondAttribute="bottom" constant="15" id="HgM-1S-0NA"/>
+                            <constraint firstItem="g2h-ZI-zLm" firstAttribute="leading" secondItem="vbo-44-YVF" secondAttribute="leading" constant="15" id="OcD-xy-ueT"/>
+                            <constraint firstItem="g2h-ZI-zLm" firstAttribute="top" secondItem="vbo-44-YVF" secondAttribute="top" constant="15" id="j0T-SO-70Y"/>
+                            <constraint firstAttribute="trailing" secondItem="g2h-ZI-zLm" secondAttribute="trailing" constant="15" id="ofy-zu-O9v"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="vbo-44-YVF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1Eb-iQ-be1"/>
+                <constraint firstAttribute="trailing" secondItem="vbo-44-YVF" secondAttribute="trailing" id="gDN-uo-CTZ"/>
+                <constraint firstItem="vbo-44-YVF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oAr-PG-pPj"/>
+                <constraint firstAttribute="bottom" secondItem="vbo-44-YVF" secondAttribute="bottom" id="rRn-mt-E5s"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="rGa-xN-k83"/>
+            <connections>
+                <outlet property="headerLabel" destination="g2h-ZI-zLm" id="gwk-VS-ip5"/>
+                <outlet property="textLabel" destination="SyB-S4-rP4" id="Jmx-Zz-BdC"/>
+                <outlet property="widthConstraint" destination="5OR-yf-evN" id="A1R-Pg-d9j"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
