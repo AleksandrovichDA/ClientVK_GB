@@ -47,7 +47,7 @@ class GetCacheImage: Operation {
               let fileName = filePath,
               let info = try? FileManager.default.attributesOfItem(atPath: fileName),
               let modificationDate = info[FileAttributeKey.modificationDate] as? Date else { return }
-        
+        //print("Путь \(filePath)")
         let lifeTime = Date().timeIntervalSince(modificationDate)
         
         guard lifeTime <= cacheLifeTime,
