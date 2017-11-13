@@ -1,4 +1,5 @@
-
+._*
+*.DS_Store
 *.md
 *.swift
 *.h
@@ -36,3 +37,4 @@ Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/FirebaseInstance
 Pods/FirebaseCore/Frameworks/FirebaseNanoPB.framework/FirebaseNanoPB
 Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/FirebaseAuth
 Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/FirebaseAnalytics
+.DS_Store

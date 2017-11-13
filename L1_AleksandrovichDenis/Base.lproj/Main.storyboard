@@ -270,10 +270,10 @@
                                             </constraints>
                                         </imageView>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tpi-e3-cPD">
-                                            <rect key="frame" x="0.0" y="74.5" width="320" height="180"/>
+                                            <rect key="frame" x="0.0" y="74.5" width="320" height="183"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="180" id="HRD-VX-pTG"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="HRD-VX-pTG"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="epd-1G-yp1"/>
                                             </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R61-9E-nIi">
@@ -333,7 +333,7 @@
                                         <constraint firstAttribute="trailing" secondItem="utm-Eh-2Xt" secondAttribute="trailing" constant="15" id="Ncl-Vp-3kU"/>
                                         <constraint firstAttribute="bottom" secondItem="3mW-fK-oES" secondAttribute="bottom" constant="15" id="OfY-Wp-UrV"/>
                                         <constraint firstItem="knQ-n1-fYv" firstAttribute="leading" secondItem="D1a-pA-4pn" secondAttribute="leading" constant="15" id="Qhc-o4-yC5"/>
-                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tpi-e3-cPD" secondAttribute="bottom" constant="42" id="SKH-Ov-aPp"/>
+                                        <constraint firstAttribute="bottom" secondItem="tpi-e3-cPD" secondAttribute="bottom" constant="42" id="SKH-Ov-aPp"/>
                                         <constraint firstItem="Iud-h2-tTX" firstAttribute="leading" secondItem="D1a-pA-4pn" secondAttribute="leading" constant="15" id="UDj-bq-7Je"/>
                                         <constraint firstItem="mqq-wW-EMA" firstAttribute="leading" secondItem="D1a-pA-4pn" secondAttribute="leading" constant="15" id="Z8K-8P-jfM"/>
                                         <constraint firstItem="knQ-n1-fYv" firstAttribute="top" secondItem="mqq-wW-EMA" secondAttribute="bottom" constant="5" id="Zr7-Pr-n5s"/>
