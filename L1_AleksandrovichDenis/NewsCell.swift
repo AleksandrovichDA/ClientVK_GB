@@ -65,7 +65,13 @@ extension NewsCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         photoArray.append(image!)
         let width = image?.size.width ?? 0
         let height = image?.size.height ?? 0
-        return CGSize(width: width * 0.5, height: height * 0.5)
+        
+        var k : CGFloat = 0.4
+        if let count = attachPhoto?.count, count > 1 {
+            k = 0.25
+        }
+        
+        return CGSize(width: width * k, height: height * k)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

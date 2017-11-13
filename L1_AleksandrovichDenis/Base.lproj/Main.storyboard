@@ -273,7 +273,7 @@
                                             <rect key="frame" x="0.0" y="74.5" width="320" height="183"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="HRD-VX-pTG"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="HRD-VX-pTG"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="epd-1G-yp1"/>
                                             </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R61-9E-nIi">
