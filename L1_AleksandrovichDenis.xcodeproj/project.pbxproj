@@ -29,6 +29,8 @@
 		9284122E1F9DB652001B09E6 /* LoadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284122D1F9DB652001B09E6 /* LoadPhoto.swift */; };
 		928412301F9DD667001B09E6 /* SetPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284122F1F9DD667001B09E6 /* SetPhoto.swift */; };
 		92866BC01F7AEB2200F1EE6A /* MyFrend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92866BBF1F7AEB2100F1EE6A /* MyFrend.swift */; };
+		928B85A91FBCC02A00890B11 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B85A81FBCC02A00890B11 /* Post.swift */; };
+		928B85AB1FBCC9C500890B11 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B85AA1FBCC9C500890B11 /* PostViewController.swift */; };
 		92A22F971FA129EC00E538D2 /* GetCacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A22F961FA129EC00E538D2 /* GetCacheImage.swift */; };
 		92A22F991FA271DD00E538D2 /* SaveImageToChache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A22F981FA271DD00E538D2 /* SaveImageToChache.swift */; };
 		92ADE85A1FB0F2BA007D1B1D /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADE8591FB0F2BA007D1B1D /* UserLogin.swift */; };
@@ -42,6 +44,8 @@
 		92D517C11F917D70001EAB72 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D517C01F917D70001EAB72 /* Message.swift */; };
 		92D517CB1F920AD9001EAB72 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D517C91F920AD9001EAB72 /* MessageCell.swift */; };
 		92D517CC1F920AD9001EAB72 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D517CA1F920AD9001EAB72 /* MessageCell.xib */; };
+		92E245881FBD94120029BC6A /* AddLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E245871FBD94120029BC6A /* AddLocationController.swift */; };
+		92E2458A1FBDAD160029BC6A /* LocationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E245891FBDAD160029BC6A /* LocationManger.swift */; };
 		92EF7EA21F7BC8E000189432 /* MyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF7EA11F7BC8E000189432 /* MyGroup.swift */; };
 		92EF7EA51F7C218900189432 /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF7EA41F7C218900189432 /* MyGroupCell.swift */; };
 		92F144381FB0F0320004C4D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92F144371FB0F0320004C4D5 /* GoogleService-Info.plist */; };
@@ -77,6 +81,8 @@
 		9284122D1F9DB652001B09E6 /* LoadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadPhoto.swift; sourceTree = "<group>"; };
 		9284122F1F9DD667001B09E6 /* SetPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPhoto.swift; sourceTree = "<group>"; };
 		92866BBF1F7AEB2100F1EE6A /* MyFrend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFrend.swift; sourceTree = "<group>"; };
+		928B85A81FBCC02A00890B11 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		928B85AA1FBCC9C500890B11 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		92A22F961FA129EC00E538D2 /* GetCacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCacheImage.swift; sourceTree = "<group>"; };
 		92A22F981FA271DD00E538D2 /* SaveImageToChache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImageToChache.swift; sourceTree = "<group>"; };
 		92ADE8591FB0F2BA007D1B1D /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 		92D517C01F917D70001EAB72 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		92D517C91F920AD9001EAB72 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		92D517CA1F920AD9001EAB72 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		92E245871FBD94120029BC6A /* AddLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationController.swift; sourceTree = "<group>"; };
+		92E245891FBDAD160029BC6A /* LocationManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManger.swift; sourceTree = "<group>"; };
 		92EF7EA11F7BC8E000189432 /* MyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroup.swift; sourceTree = "<group>"; };
 		92EF7EA41F7C218900189432 /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
 		92F144371FB0F0320004C4D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -219,6 +227,17 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		928B85A71FBCBFBC00890B11 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				928B85A81FBCC02A00890B11 /* Post.swift */,
+				928B85AA1FBCC9C500890B11 /* PostViewController.swift */,
+				92E245871FBD94120029BC6A /* AddLocationController.swift */,
+				92E245891FBDAD160029BC6A /* LocationManger.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
 		92ADE8581FB0F230007D1B1D /* Authorisation */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +268,7 @@
 		92FB7BA61F92C3E000E6A908 /* Newsfeed */ = {
 			isa = PBXGroup;
 			children = (
+				928B85A71FBCBFBC00890B11 /* Post */,
 				92B57CBD1F93E4E90093F352 /* Newsfeed.swift */,
 				92FB7BA91F92C5E300E6A908 /* NewsfeedController.swift */,
 				92B57CBF1F9415A50093F352 /* NewsCell.swift */,
@@ -414,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928B85AB1FBCC9C500890B11 /* PostViewController.swift in Sources */,
 				9240A3F61F742CCA00D37F7F /* FotoMyFrendCollectionViewController.swift in Sources */,
 				9240A3ED1F73DCD800D37F7F /* AllGroupsController.swift in Sources */,
 				921318461F9B86640030860C /* AsyncOperation.swift in Sources */,
@@ -423,6 +444,7 @@
 				92A22F971FA129EC00E538D2 /* GetCacheImage.swift in Sources */,
 				92D517C11F917D70001EAB72 /* Message.swift in Sources */,
 				9240A3EB1F73C70000D37F7F /* MyGroupsController.swift in Sources */,
+				92E2458A1FBDAD160029BC6A /* LocationManger.swift in Sources */,
 				928412301F9DD667001B09E6 /* SetPhoto.swift in Sources */,
 				9240A3E91F73C33600D37F7F /* MyFrendsController.swift in Sources */,
 				92F3BF7A1FAF5C8700FD4902 /* PhotoNewsCell.swift in Sources */,
@@ -433,6 +455,7 @@
 				92BD3A271F8EAC06000F0909 /* DBHandler.swift in Sources */,
 				92B57CC11F9415A50093F352 /* NewsCell.swift in Sources */,
 				9284122C1F9D4C5C001B09E6 /* SaveData.swift in Sources */,
+				928B85A91FBCC02A00890B11 /* Post.swift in Sources */,
 				92BE5BE91F9E95DD003F54C3 /* PhotoService.swift in Sources */,
 				92B57CBE1F93E4E90093F352 /* Newsfeed.swift in Sources */,
 				92EF7EA21F7BC8E000189432 /* MyGroup.swift in Sources */,
@@ -445,6 +468,7 @@
 				9271A5321F77E807008B013F /* VKService.swift in Sources */,
 				9240A3F81F742D0700D37F7F /* FotoMyFrendCell.swift in Sources */,
 				92BE5BEB1F9EA0CE003F54C3 /* NewsfeedService.swift in Sources */,
+				92E245881FBD94120029BC6A /* AddLocationController.swift in Sources */,
 				92866BC01F7AEB2200F1EE6A /* MyFrend.swift in Sources */,
 				9240A3F01F73DD0900D37F7F /* AllGroupsCell.swift in Sources */,
 				92EF7EA51F7C218900189432 /* MyGroupCell.swift in Sources */,

@@ -12,6 +12,7 @@ import Alamofire
 
 class NewsfeedController: UITableViewController {
 
+    
     let opq = OperationQueue()
     let vkService = VKService()
     var newsfeedRealm : Results<Newsfeed>?
@@ -24,7 +25,7 @@ class NewsfeedController: UITableViewController {
         pairTableAndRealm()
         loadData()
     }
-    
+        
     func setConfNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
