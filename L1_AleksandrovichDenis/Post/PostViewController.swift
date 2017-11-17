@@ -11,8 +11,10 @@ import Alamofire
 
 class PostViewController: UIViewController {
 
+    var textLocation : String?
     @IBOutlet weak var textPost: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -60,5 +62,8 @@ class PostViewController: UIViewController {
         scrollView?.contentInset = contentInsets
         scrollView?.scrollIndicatorInsets = contentInsets
     }
-
+    
+    @IBAction func addLocation(_ sender: Any) {
+    
+    }
 }
