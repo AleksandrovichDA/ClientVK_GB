@@ -8,9 +8,10 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class AddLocationController: UIViewController {
-
+class AddLocationController: UIViewController, UIGestureRecognizerDelegate {
+    
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
@@ -32,10 +33,35 @@ class AddLocationController: UIViewController {
             let thoroughfare = LocationManger.instance.location?.thoroughfare ?? ""
             let subThoroughfare = LocationManger.instance.location?.subThoroughfare ?? ""
             let oldText = presenter.textPost.text ?? ""
-            presenter.textPost.text = oldText + "Локация: " + country + ", " + administrativeArea + ", " + subLocality + ", " + thoroughfare + ", " + subThoroughfare
+            presenter.textPost.text = oldText + "Локация: " + country + "\n" + administrativeArea + "\n" + subLocality + "\n" + thoroughfare + ", " + subThoroughfare
         }
-        
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addPin(_ sender: UILongPressGestureRecognizer) {
+        let geocoder = CLGeocoder()
+        var placeMark: CLPlacemark?
+        let newLocationPin = sender.location(in: self.mapView)
+        let newCoordinate = self.mapView.convert(newLocationPin, toCoordinateFrom: self.mapView)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newCoordinate
+        annotation.title = "Новая позиция"
+        
+        let newLocation: CLLocation =  CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+        
+        geocoder.reverseGeocodeLocation(newLocation, completionHandler: { (placemarks, error) -> Void in
+            placeMark = placemarks?[0]
+            let administrativeArea = placeMark?.administrativeArea
+            let country = placeMark?.country
+            let subLocality = placeMark?.subLocality
+            let thoroughfare = placeMark?.thoroughfare
+            let subThoroughfare = placeMark?.subThoroughfare
+            annotation.subtitle = country! + "\n" + administrativeArea! + "\n" + subLocality! + "\n" + thoroughfare! + ", " + subThoroughfare!
+            LocationManger.instance.location = placeMark
+        })
+
+        self.mapView.removeAnnotations(mapView.annotations)
+        self.mapView.addAnnotation(annotation)
     }
 }
 

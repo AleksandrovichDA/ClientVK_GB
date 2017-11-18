@@ -15,9 +15,13 @@ class ParseData: Operation {
     
     override func main() {
         guard let getDataOperation = dependencies.first as? GetDataOperation,
-              let data = getDataOperation.data else { return }
+            let data = getDataOperation.data else { return }
         let json = JSON(data)
         let groups = json["response"]["groups"].arrayValue
-        let _ = json["response"]["items"].array?.flatMap{ outputData.append(Newsfeed(json: $0, groups: groups)) } ?? []
+        
+        let filter = json["response"]["items"].filter {
+            $0.1["type"].stringValue != "wall_photo"
+        }
+        filter.map{ outputData.append(Newsfeed(json: $0.1, groups: groups)) }
     }
 }

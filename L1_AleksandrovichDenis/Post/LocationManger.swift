@@ -38,9 +38,6 @@ class LocationManger: NSObject {
 }
 
 extension LocationManger: CLLocationManagerDelegate {
-    
-    
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(locations[0].coordinate)
         delegete?.locationManger(self, coordination: locations[0].coordinate)
@@ -48,9 +45,6 @@ extension LocationManger: CLLocationManagerDelegate {
         
         geoCoder.reverseGeocodeLocation(location) { mark, error in
             self.location = (mark?.last)!
-            print(mark?.last?.addressDictionary)
         }
     }
-    
 }
-
