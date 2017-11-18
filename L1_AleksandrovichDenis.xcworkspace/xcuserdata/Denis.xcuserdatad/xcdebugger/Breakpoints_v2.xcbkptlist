@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "L1_AleksandrovichDenis/Post/AddLocationController.swift"
+            timestampString = "532703342.590641"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "addLocation(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "L1_AleksandrovichDenis.AddLocationController.addLocation(Any) -&gt; ()"
+                  moduleName = "L1_AleksandrovichDenis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Denis/Documents/GitHub/ClientVK_GB/L1_AleksandrovichDenis/Post/AddLocationController.swift"
+                  timestampString = "532703139.816574"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in L1_AleksandrovichDenis.AddLocationController.addLocation(Any) -&gt; ()"
+                  moduleName = "L1_AleksandrovichDenis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Denis/Documents/GitHub/ClientVK_GB/L1_AleksandrovichDenis/Post/AddLocationController.swift"
+                  timestampString = "532703139.824278"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

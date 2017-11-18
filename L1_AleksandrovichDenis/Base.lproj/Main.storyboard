@@ -8,6 +8,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login Form Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -180,9 +185,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="vvi-MJ-4Rd">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yr8-s0-bAQ">
+                                    <rect key="frame" x="10" y="4" width="109" height="35"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Новый пост" image="create_35">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="m1N-qs-DDa" kind="presentation" id="CdC-zy-Pjw"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="yr8-s0-bAQ" firstAttribute="leading" secondItem="vvi-MJ-4Rd" secondAttribute="leading" constant="10" id="1Rz-tt-Ghn"/>
+                                <constraint firstItem="yr8-s0-bAQ" firstAttribute="centerY" secondItem="vvi-MJ-4Rd" secondAttribute="centerY" id="SH4-9E-5l4"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="300" id="qjO-nP-dNr" customClass="NewsCell" customModule="L1_AleksandrovichDenis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="300"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qjO-nP-dNr" id="D1a-pA-4pn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="299.5"/>
@@ -369,13 +395,7 @@
                             <outlet property="delegate" destination="pqZ-Yv-sNs" id="oMg-V2-sEY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Новости" id="Lbb-D8-FnE">
-                        <barButtonItem key="leftBarButtonItem" image="Запись_Кнопка_22" id="Suc-NS-CdS">
-                            <connections>
-                                <segue destination="m1N-qs-DDa" kind="presentation" id="hbc-mp-JSU"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Новости" id="Lbb-D8-FnE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIm-Bv-h2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,8 +452,9 @@
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W99-lk-x0r">
-                                                <rect key="frame" x="8" y="31" width="304" height="435"/>
-                                                <color key="backgroundColor" white="0.81537543406111113" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="8" y="31" width="304" height="422"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -444,8 +465,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdr-uk-cF0">
-                                                <rect key="frame" x="8" y="474" width="22" height="22"/>
-                                                <state key="normal" image="Булавка_Кнопка_22">
+                                                <rect key="frame" x="8" y="461" width="35" height="35"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" image="geolocation_35">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -534,19 +556,27 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yg5-KL-W5A">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="A9g-9u-xT6">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="G3Y-Lb-fyZ" appends="YES" id="cGo-aq-Sg3"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="yg5-KL-W5A" id="pl5-Gw-a1V"/>
+                        <outlet property="mapView" destination="A9g-9u-xT6" id="4B2-0e-BGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9L-qY-Jdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="G3Y-Lb-fyZ">
+                    <connections>
+                        <action selector="addPin:" destination="jGe-Zc-qCk" id="Imt-oI-Vry"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4297.5" y="-941.19718309859161"/>
         </scene>
@@ -829,9 +859,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Булавка_Кнопка_22" width="22" height="22"/>
+        <image name="create_35" width="35" height="35"/>
+        <image name="geolocation_35" width="35" height="35"/>
         <image name="Группа_Вкладка_34" width="34" height="34"/>
-        <image name="Запись_Кнопка_22" width="22" height="22"/>
         <image name="Контакты_Вкладка_34" width="34" height="34"/>
         <image name="Лента_Вкладка_34" width="34" height="34"/>
         <image name="комментарий_индикатор" width="50" height="50"/>
