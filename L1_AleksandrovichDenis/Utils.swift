@@ -18,3 +18,31 @@ class Delay {
         timer = Timer.scheduledTimer(withTimeInterval: delayTime, repeats: false) { _ in run() }
     }
 }
+
+let fetchCitiesWeatherGroup = DispatchGroup()
+var timer: DispatchSourceTimer?
+var lastUpdate: Date? {
+    get {
+        return UserDefaults.standard.object(forKey: "Last Update") as? Date
+    }
+    set {
+        UserDefaults.standard.setValue(Date(), forKey: "Last Update")
+    }
+}
+
+class Utils {
+    let fetchCitiesWeatherGroup = DispatchGroup()
+    var timer: DispatchSourceTimer?
+    
+    let instance = Utils()
+    private init(){}
+    
+    var lastUpdate: Date? {
+        get {
+            return UserDefaults.standard.object(forKey: "Last Update") as? Date
+        }
+        set {
+            UserDefaults.standard.setValue(Date(), forKey: "Last Update")
+        }
+    }
+}

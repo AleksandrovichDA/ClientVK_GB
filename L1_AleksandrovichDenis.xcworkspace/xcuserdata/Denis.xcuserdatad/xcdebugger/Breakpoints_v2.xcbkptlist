@@ -9,44 +9,91 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "L1_AleksandrovichDenis/Post/AddLocationController.swift"
-            timestampString = "532703342.590641"
+            filePath = "L1_AleksandrovichDenis/AppDelegate.swift"
+            timestampString = "532801449.12752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "addLocation(_:)"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "application(_:performFetchWithCompletionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "L1_AleksandrovichDenis/Invitations.swift"
+            timestampString = "532801449.149824"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "L1_AleksandrovichDenis/AppDelegate.swift"
+            timestampString = "532801533.589547"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "application(_:performFetchWithCompletionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "L1_AleksandrovichDenis.AddLocationController.addLocation(Any) -&gt; ()"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in L1_AleksandrovichDenis.AppDelegate.application(__ObjC.UIApplication, performFetchWithCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
                   moduleName = "L1_AleksandrovichDenis"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Denis/Documents/GitHub/ClientVK_GB/L1_AleksandrovichDenis/Post/AddLocationController.swift"
-                  timestampString = "532703139.816574"
+                  urlString = "file:///Users/Denis/Documents/GitHub/ClientVK_GB/L1_AleksandrovichDenis/AppDelegate.swift"
+                  timestampString = "532801533.681045"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "360">
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "2873">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in L1_AleksandrovichDenis.AddLocationController.addLocation(Any) -&gt; ()"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; Swift.Optional&lt;L1_AleksandrovichDenis.Invitations&gt; in closure #2 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in L1_AleksandrovichDenis.AppDelegate.application(__ObjC.UIApplication, performFetchWithCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
                   moduleName = "L1_AleksandrovichDenis"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Denis/Documents/GitHub/ClientVK_GB/L1_AleksandrovichDenis/Post/AddLocationController.swift"
-                  timestampString = "532703139.824278"
+                  urlString = "file:///Users/Denis/Documents/GitHub/ClientVK_GB/L1_AleksandrovichDenis/AppDelegate.swift"
+                  timestampString = "532801533.684733"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "4">
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "93">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Array&lt;L1_AleksandrovichDenis.Invitations&gt; in closure #2 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in L1_AleksandrovichDenis.AppDelegate.application(__ObjC.UIApplication, performFetchWithCompletionHandler: (__C.UIBackgroundFetchResult) -&gt; ()) -&gt; ()"
+                  moduleName = "L1_AleksandrovichDenis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Denis/Documents/GitHub/ClientVK_GB/L1_AleksandrovichDenis/AppDelegate.swift"
+                  timestampString = "532801533.687893"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "62">
                </Location>
             </Locations>
          </BreakpointContent>
