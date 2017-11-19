@@ -745,7 +745,7 @@
             <objects>
                 <navigationController id="gKu-cD-tES" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" image="Группа_Вкладка_34" selectedImage="Группа_Вкладка_34" id="H5e-cf-FjP">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="badgeColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F6e-Dc-TSG">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
