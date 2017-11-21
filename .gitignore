@@ -1,7 +1,6 @@
 ._*
 *.DS_Store
 *Pods
-*UserInterfaceState.xcuserstate
 .DS_Store
-*/UserInterfaceState.xcuserstate
 L1_AleksandrovichDenis.xcworkspace/xcuserdata/Denis.xcuserdatad/UserInterfaceState.xcuserstate
+.DS_Store
