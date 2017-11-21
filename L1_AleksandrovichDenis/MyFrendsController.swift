@@ -32,7 +32,7 @@ class MyFrendsController: UITableViewController {
             return
         }
         myFrendsRealm = realm.objects(MyFrend.self)
-        token = myFrendsRealm?.addNotificationBlock{ [weak self] (changes: RealmCollectionChange) in
+        token = myFrendsRealm?.observe{ [weak self] (changes: RealmCollectionChange) in
             guard let tableView = self?.tableView else { // переделать в do
                 return
             }

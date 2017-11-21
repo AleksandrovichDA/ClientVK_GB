@@ -838,16 +838,17 @@
             </objects>
             <point key="canvasLocation" x="3522" y="525"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar-->
         <scene sceneID="QU0-F5-FaU">
             <objects>
-                <tabBarController id="lVI-EH-3rv" sceneMemberID="viewController">
+                <tabBarController id="lVI-EH-3rv" customClass="UITabBar" customModule="L1_AleksandrovichDenis" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ceC-9N-2Ku">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <outlet property="tabBar" destination="ceC-9N-2Ku" id="IgH-Qi-SWi"/>
                         <segue destination="RdP-1Y-eJC" kind="relationship" relationship="viewControllers" id="zfw-Df-W3C"/>
                         <segue destination="8Sj-3B-ave" kind="relationship" relationship="viewControllers" id="aJT-Aq-xLg"/>
                         <segue destination="gKu-cD-tES" kind="relationship" relationship="viewControllers" id="9GU-OR-CfC"/>

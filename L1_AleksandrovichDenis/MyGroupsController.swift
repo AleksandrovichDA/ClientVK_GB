@@ -73,7 +73,7 @@ class MyGroupsController: UITableViewController {
             return
         }
         myGroupsRealm = realm.objects(MyGroup.self)
-        token = myGroupsRealm?.addNotificationBlock{ [weak self] (changes: RealmCollectionChange) in
+        token = myGroupsRealm?.observe{ [weak self] (changes: RealmCollectionChange) in
             
             guard let tableView = self?.tableView else { // переделать в do
                 return
@@ -122,8 +122,6 @@ class MyGroupsController: UITableViewController {
         }
     }
 }
-
-
 
 
 

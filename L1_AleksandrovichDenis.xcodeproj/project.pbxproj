@@ -23,6 +23,7 @@
 		9243B0C01F6B00B0007EAA84 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243B0BF1F6B00B0007EAA84 /* LoginFormController.swift */; };
 		924BD5641FC1E16C000BA0BF /* Invitations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924BD5631FC1E16C000BA0BF /* Invitations.swift */; };
 		924BD5661FC1E265000BA0BF /* GroupsInvitations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924BD5651FC1E265000BA0BF /* GroupsInvitations.swift */; };
+		924BD5701FC362E5000BA0BF /* UITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924BD56F1FC362E5000BA0BF /* UITabBar.swift */; };
 		9263A8501F921A5500434668 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9263A84F1F921A5500434668 /* MessagesViewController.swift */; };
 		9271A5321F77E807008B013F /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271A5311F77E807008B013F /* VKService.swift */; };
 		928412261F9D3C52001B09E6 /* GetDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928412251F9D3C52001B09E6 /* GetDataOperation.swift */; };
@@ -77,6 +78,7 @@
 		9243B0BF1F6B00B0007EAA84 /* LoginFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		924BD5631FC1E16C000BA0BF /* Invitations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitations.swift; sourceTree = "<group>"; };
 		924BD5651FC1E265000BA0BF /* GroupsInvitations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsInvitations.swift; sourceTree = "<group>"; };
+		924BD56F1FC362E5000BA0BF /* UITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBar.swift; sourceTree = "<group>"; };
 		9263A84F1F921A5500434668 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		9271A5311F77E807008B013F /* VKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
 		928412251F9D3C52001B09E6 /* GetDataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataOperation.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				92F144371FB0F0320004C4D5 /* GoogleService-Info.plist */,
 				92BD3A281F8EBB62000F0909 /* Configuration.plist */,
 				92BD3A2A1F8EC563000F0909 /* Configuration.swift */,
+				924BD56F1FC362E5000BA0BF /* UITabBar.swift */,
 			);
 			path = L1_AleksandrovichDenis;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				924BD5641FC1E16C000BA0BF /* Invitations.swift in Sources */,
 				92D517CB1F920AD9001EAB72 /* MessageCell.swift in Sources */,
 				9284122E1F9DB652001B09E6 /* LoadPhoto.swift in Sources */,
+				924BD5701FC362E5000BA0BF /* UITabBar.swift in Sources */,
 				9240A3E71F73C17D00D37F7F /* MyFrendsCell.swift in Sources */,
 				928412281F9D40BC001B09E6 /* ParseData.swift in Sources */,
 				9243B0C01F6B00B0007EAA84 /* LoginFormController.swift in Sources */,

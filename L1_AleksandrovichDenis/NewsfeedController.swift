@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import Alamofire
 
-class NewsfeedController: UITableViewController {
+class NewsfeedController: UITableViewController, UITabBarDelegate {
 
     
     let opq = OperationQueue()
@@ -56,7 +56,7 @@ class NewsfeedController: UITableViewController {
     func pairTableAndRealm() {
         guard let realm = try? Realm() else { return }
         newsfeedRealm = realm.objects(Newsfeed.self)
-        token = newsfeedRealm?.addNotificationBlock{ [weak self] (changes: RealmCollectionChange) in
+        token = newsfeedRealm?.observe{ [weak self] (changes: RealmCollectionChange) in
             guard let tableView = self?.tableView else { return }
             switch changes {
             case .initial:

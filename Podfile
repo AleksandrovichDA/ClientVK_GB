@@ -7,7 +7,7 @@ target 'L1_AleksandrovichDenis' do
 
 
   pod 'Alamofire', '~> 4.5’
-  pod 'RealmSwift'
+  pod 'RealmSwift', '~> 3.0.2’
   pod 'SwiftyJSON'
   pod 'AlamofireImage', '~> 3.3'
   pod 'Firebase/Core'
