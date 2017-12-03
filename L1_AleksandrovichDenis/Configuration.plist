@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>clientID</key>
-	<integer>6196172</integer>
+	<integer>6272261</integer>
 	<key>displayMode</key>
 	<string>mobile</string>
 	<key>redirectURI</key>
 	<string>https://oauth.vk.com/blank.html</string>
 	<key>scope</key>
-	<string>274595</string>
+	<integer>277919</integer>
 	<key>responseType</key>
 	<string>token</string>
 	<key>versionAPI</key>
-	<string>5.68</string>
+	<string>5.69</string>
 </dict>
 </plist>

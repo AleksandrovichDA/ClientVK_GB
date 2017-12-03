@@ -14,12 +14,25 @@ import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+ 
+//    let realm = Realm.Configuration(fileURL: FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.lastNews")?.appendingPathComponent("default.realm"))
+
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        let fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.lastNews")!.appendingPathComponent("default.realm")
+        let config = Realm.Configuration(fileURL: fileURL)
+        print(config)
+        
+        Realm.Configuration.defaultConfiguration = config
+        
+        let realm = try! Realm()
+        
+        
+        print(realm)
         return true
     }
     

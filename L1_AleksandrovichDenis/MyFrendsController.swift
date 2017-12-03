@@ -65,8 +65,8 @@ class MyFrendsController: UITableViewController {
         
         guard let frend = myFrendsRealm?[indexPath.row] else {
             cell.idFrend = 0
-            cell.nameFrend?.text = ""
-            cell.avatarFrend?.image = #imageLiteral(resourceName: "defaultAvatarFrend")
+            cell.name?.text = ""
+            cell.photo?.image = nil
             return cell
         }
         
@@ -74,10 +74,15 @@ class MyFrendsController: UITableViewController {
         cell.firstName = frend.firstName
         cell.lastName = frend.lastName
         cell.bigPhotoURL = frend.bigPhotoURL
-        cell.nameFrend.text = frend.firstName + " " + frend.lastName
-        //cell.imageView?.image = frend.smallPhoto
-        cell.imageView?.image = PhotoService.loadPhoto(frend.smallPhotoURL)
+        cell.name.text = frend.firstName + " " + frend.lastName
+        cell.photo?.image = PhotoService.loadPhoto(frend.smallPhotoURL)
+        cell.status?.text = (frend.status == 0) ? "" : "онлайн"
+        cell.status?.textColor = (frend.status == 0) ? UIColor.gray : UIColor.green
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 77.0
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

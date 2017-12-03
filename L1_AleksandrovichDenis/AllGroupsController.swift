@@ -34,7 +34,7 @@ class AllGroupsController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 80.0
+        return 77.0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,9 +43,7 @@ class AllGroupsController: UITableViewController, UISearchBarDelegate {
         if isSearching {
             cell.idGroup = filterGroups[indexPath.row].id
             cell.nameGroup.text = filterGroups[indexPath.row].name
-            vkService.loadingFoto(photoURL: filterGroups[indexPath.row].photoURL) { avatarFoto in
-                cell.imageView?.image = avatarFoto
-            }
+            cell.imageGroup?.image = PhotoService.loadPhoto(filterGroups[indexPath.row].photoURL)
             cell.membersCount.text = String(filterGroups[indexPath.row].membersCount)
         }
         return cell

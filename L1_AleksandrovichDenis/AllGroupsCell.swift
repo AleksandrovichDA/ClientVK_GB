@@ -11,8 +11,8 @@ import UIKit
 class AllGroupsCell: UITableViewCell {
     var idGroup : Int!
     @IBOutlet weak var nameGroup: UILabel!
-    //@IBOutlet weak var countMember: UILabel!
     @IBOutlet weak var membersCount: UILabel!
+    @IBOutlet weak var imageGroup: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

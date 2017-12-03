@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="LastNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fRh-GY-AEH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsViewCell" rowHeight="84" id="HJ0-xf-Vci" customClass="NewsViewCell" customModule="LastNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="297" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HJ0-xf-Vci" id="pEV-5w-c3F">
+                                            <rect key="frame" x="0.0" y="0.0" width="297" height="83.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k3F-Hz-03X">
+                                                    <rect key="frame" x="8" y="19" width="46" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="46" id="Lj0-cV-cfw"/>
+                                                        <constraint firstAttribute="width" constant="46" id="fnc-tg-mcL"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="23"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TypePost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiX-8b-KJ0">
+                                                    <rect key="frame" x="62" y="50.5" width="227" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameSource" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbk-oZ-pqn">
+                                                    <rect key="frame" x="62" y="19" width="212" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="DiX-8b-KJ0" secondAttribute="trailing" constant="8" id="1Ih-gx-CdU"/>
+                                                <constraint firstItem="k3F-Hz-03X" firstAttribute="leading" secondItem="pEV-5w-c3F" secondAttribute="leading" constant="8" id="Inu-Tz-pS8"/>
+                                                <constraint firstItem="kbk-oZ-pqn" firstAttribute="leading" secondItem="k3F-Hz-03X" secondAttribute="trailing" constant="8" id="KKs-XD-42S"/>
+                                                <constraint firstItem="kbk-oZ-pqn" firstAttribute="top" secondItem="pEV-5w-c3F" secondAttribute="topMargin" constant="8" id="PGF-bL-pgb"/>
+                                                <constraint firstItem="DiX-8b-KJ0" firstAttribute="leading" secondItem="k3F-Hz-03X" secondAttribute="trailing" constant="8" id="RIy-h5-RGr"/>
+                                                <constraint firstItem="k3F-Hz-03X" firstAttribute="top" secondItem="pEV-5w-c3F" secondAttribute="topMargin" constant="8" id="SrX-aE-v91"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kbk-oZ-pqn" secondAttribute="trailing" constant="8" id="YBi-x8-wYp"/>
+                                                <constraint firstItem="DiX-8b-KJ0" firstAttribute="bottom" secondItem="k3F-Hz-03X" secondAttribute="bottom" id="ryI-JO-Y14"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameSource" destination="kbk-oZ-pqn" id="Q3c-ab-6sN"/>
+                                            <outlet property="photo" destination="k3F-Hz-03X" id="jkh-X8-FMj"/>
+                                            <outlet property="typePost" destination="DiX-8b-KJ0" id="jMC-4M-ZTe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="fRh-GY-AEH" secondAttribute="trailing" id="L9H-kO-zXs"/>
+                            <constraint firstItem="fRh-GY-AEH" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="cgX-zW-DGu"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="fRh-GY-AEH" secondAttribute="bottom" id="dmv-0P-YIY"/>
+                            <constraint firstItem="fRh-GY-AEH" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="wG4-RT-OW9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="500" height="350"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="350"/>
+                    <connections>
+                        <outlet property="newsLast" destination="fRh-GY-AEH" id="jpW-ap-iuN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.600000000000001" y="32.383808095952027"/>
+        </scene>
+    </scenes>
+</document>

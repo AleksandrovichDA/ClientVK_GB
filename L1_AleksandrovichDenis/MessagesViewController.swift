@@ -14,6 +14,7 @@ class MessagesViewController: UIViewController, UICollectionViewDataSource {
     var firstName : String?
     var lastName : String?
     var bigPhotoURL : String?
+    @IBOutlet weak var newsfeed: UITableView!
     var messages = [Message]()
     
     

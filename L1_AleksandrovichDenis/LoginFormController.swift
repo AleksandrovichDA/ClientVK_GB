@@ -34,7 +34,7 @@ class LoginFormController: UIViewController {
             URLQueryItem(name: "client_id", value: String(Configuration.shared.clientID)),
             URLQueryItem(name: "display", value: Configuration.shared.displayMode),
             URLQueryItem(name: "redirect_uri", value: Configuration.shared.redirectURI),
-            URLQueryItem(name: "scope", value: "277663"),//String(Configuration.shared.scope)),
+            URLQueryItem(name: "scope", value: String(Configuration.shared.scope)),
             URLQueryItem(name: "response_type", value: Configuration.shared.responseType),
             URLQueryItem(name: "v", value: Configuration.shared.versionAPI)
         ]
@@ -84,6 +84,9 @@ extension LoginFormController: WKNavigationDelegate {
         checkUserData()
         VKService.token = (token)!
         self.userDefaults.set(token, forKey: "token")
+        
+        UserDefaults.init(suiteName: "group.lastNews")?.setValue(token, forKey: "token")
+        
         self.performSegue(withIdentifier: "firstWindow", sender: nil)
     }
 }

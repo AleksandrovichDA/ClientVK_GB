@@ -26,7 +26,7 @@ enum methodRequest : String {
 class VKService {
     
     fileprivate let baseURLMethod = "https://api.vk.com"
-    fileprivate let client_id = "6196076"
+    fileprivate let client_id = "6272261" //"6196076"
     fileprivate let path = "/method"
     fileprivate let version = "5.68"
     static var token = ""
@@ -132,7 +132,7 @@ class VKService {
     func getFrends( completion: @escaping ( ) -> Void) {
         let parameters: Parameters = ["user_id"  : VKService.userId,
                                       "order"    : "name",
-                                      "fields"   : "nickname,photo_50,photo_100",
+                                      "fields"   : "nickname,photo_50,photo_100,online",
                                       "version"  : version]
         
         let url = baseURLMethod + path + methodRequest.getMyFrends.rawValue
@@ -145,7 +145,8 @@ class VKService {
                 let responseVk = response.value as! [String: Any]
                 let dataUsersAny = responseVk["response"] as! [Any]
                 let myFrends = dataUsersAny.map(){ MyFrend($0) }
-                DBHandler.saveToDB(myFrends)
+                
+                DBHandler.saveToDB(myFrends.sorted(){ $0.0.status > $0.1.status })
                 completion()
             }
         }

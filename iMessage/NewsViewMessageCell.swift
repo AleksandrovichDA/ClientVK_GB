@@ -1,23 +1,19 @@
 //
-//  MyFrendsCell.swift
-//  L1_AleksandrovichDenis
+//  NewsViewMessageCell.swift
+//  iMessage
 //
-//  Created by Denis on 21.09.17.
+//  Created by Denis on 29.11.2017.
 //  Copyright © 2017 GBSWIFT. All rights reserved.
 //
 
 import UIKit
 
-class MyFrendsCell: UITableViewCell {
-    
-    var idFrend : Int!
-    var firstName : String?
-    var lastName : String?
-    var bigPhotoURL : String?
-    
+class NewsViewMessageCell: UITableViewCell {
+
     @IBOutlet weak var photo: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var nameGroup: UILabel!
+    @IBOutlet weak var textNews: UILabel!
+    @IBOutlet weak var photoNews: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +22,8 @@ class MyFrendsCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
+
 }

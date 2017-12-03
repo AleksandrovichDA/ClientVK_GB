@@ -44,9 +44,7 @@ class MyGroupsController: UITableViewController {
         }
         
         cell.nameMyGroup.text = group.name
-        vkService.loadingFoto(photoURL: group.photoURL) { avatarFoto in
-            cell.avatarMyGroup?.image = avatarFoto
-        }
+        cell.avatarMyGroup?.image = PhotoService.loadPhoto(group.photoURL)
         return cell
     }
     
@@ -101,6 +99,10 @@ class MyGroupsController: UITableViewController {
                 fatalError("\(error)")
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 77.0
     }
     
     @IBAction func addGroup(segue: UIStoryboardSegue) {

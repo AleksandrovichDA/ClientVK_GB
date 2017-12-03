@@ -16,6 +16,7 @@ class MyFrend: Object {
     @objc dynamic var smallPhotoURL : String  = ""
     @objc dynamic var smallPhoto    : UIImage? 
     @objc dynamic var bigPhotoURL   : String  = ""
+    @objc dynamic var status : Int = 0
     
     override static func ignoredProperties() -> [String] {
         return ["smallPhoto"]
@@ -29,5 +30,6 @@ class MyFrend: Object {
         self.lastName = user!["last_name"] as! String
         self.smallPhotoURL = user!["photo_50"] as! String
         self.bigPhotoURL = user!["photo_100"] as! String
+        self.status = user!["online"] as! Int
     }
 }
