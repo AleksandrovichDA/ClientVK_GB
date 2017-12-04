@@ -53,7 +53,7 @@ class MyGroupsController: UITableViewController {
             guard let group = myGroupsRealm?[indexPath.row] else {
                 return
             }
-            vkService.leaveGroup(group.id){ _ in
+            vkService.leaveGroup(group.id){ 
                 do {
                     let realm = try Realm()
                     realm.beginWrite()
@@ -110,7 +110,7 @@ class MyGroupsController: UITableViewController {
             let allGroupsController = segue.source as! AllGroupsController
             if let indexPath = allGroupsController.tableView.indexPathForSelectedRow {
                 let selectGroup = allGroupsController.filterGroups[indexPath.row]
-                vkService.joinGroup( selectGroup.id ){ _ in
+                vkService.joinGroup( selectGroup.id ){ 
                     do {
                         let realm = try Realm()
                         realm.beginWrite()

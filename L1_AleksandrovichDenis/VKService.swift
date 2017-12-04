@@ -146,7 +146,14 @@ class VKService {
                 let dataUsersAny = responseVk["response"] as! [Any]
                 let myFrends = dataUsersAny.map(){ MyFrend($0) }
                 
-                DBHandler.saveToDB(myFrends.sorted(){ $0.0.status > $0.1.status })
+                
+
+                
+                DBHandler.saveToDB( myFrends.sorted(by: {
+                    (s1: MyFrend, s2: MyFrend) -> Bool in return s1.status > s2.status
+                } ) )
+                   // $0.0.status > $0.1.status
+                //} )
                 completion()
             }
         }

@@ -10,9 +10,11 @@ import UIKit
 import WebKit
 import FirebaseAuth
 import FirebaseDatabase
+import WatchConnectivity
 
-class LoginFormController: UIViewController {
+class LoginFormController: UIViewController, WCSessionDelegate {
     
+    var token = ""
     let userDefaults = UserDefaults.standard
     let vkService = VKService()
     var requestHandle : DatabaseHandle?
@@ -78,15 +80,46 @@ extension LoginFormController: WKNavigationDelegate {
         }
         
         VKService.userId = Int(params["user_id"]!)!
-        let token = params["access_token"]
+        self.token = params["access_token"]!
         decisionHandler(.allow)
         print("Токен \(token)")
         checkUserData()
-        VKService.token = (token)!
+        VKService.token = (token)
         self.userDefaults.set(token, forKey: "token")
-        
+        connectWatch()
         UserDefaults.init(suiteName: "group.lastNews")?.setValue(token, forKey: "token")
+        
+        
         
         self.performSegue(withIdentifier: "firstWindow", sender: nil)
     }
+    
+    func connectWatch()  {
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+    }
+    
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print(activationState)
+        guard activationState == .activated else {
+            return
+        }
+        // передаем
+        let sessionUserInfoTransfer = session.transferUserInfo(["token" : self.token])
+        print(sessionUserInfoTransfer)
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("ничего не делаем")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        WCSession.default.activate()
+    }
+    
 }
+

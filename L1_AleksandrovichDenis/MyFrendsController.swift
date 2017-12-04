@@ -24,7 +24,7 @@ class MyFrendsController: UITableViewController {
         
         setConfNavigationBar()
         pairTableAndRealm()
-        vkService.getFrends() { _ in }
+        vkService.getFrends() {  }
     }
     
     func pairTableAndRealm() {
