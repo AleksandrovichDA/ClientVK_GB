@@ -10,7 +10,8 @@ import Foundation
 import Alamofire
 
 class PhotoService {
-    static func loadPhoto( _ imageURL : String ) -> UIImage? {
+    
+    static func loadPhoto( _ imageURL : String, container: UITableView?, containerCell: UICollectionView?, indexPath: IndexPath) -> UIImage? {
         let queue = OperationQueue()
         
         let getCacheImage = GetCacheImage(url: imageURL)
@@ -31,6 +32,17 @@ class PhotoService {
         let saveImageToChache = SaveImageToChache(url: imageURL)
         saveImageToChache.addDependency(loadPhoto)
         queue.addOperations([loadPhoto, setPhoto1, saveImageToChache], waitUntilFinished: true)
-        return setPhoto1.outputImage
+        
+        if let container = container {
+            let reloadRow = ReloadRow(atIndexpath: indexPath, container: container)
+            reloadRow.addDependency(setPhoto)
+            OperationQueue.main.addOperation(reloadRow)
+        } else {
+            let reloadCell = ReloadCell(atIndexpath: indexPath, container: containerCell!)
+            reloadCell.addDependency(setPhoto)
+            OperationQueue.main.addOperation(reloadCell)
+        }
+        
+        return nil
     }
 }

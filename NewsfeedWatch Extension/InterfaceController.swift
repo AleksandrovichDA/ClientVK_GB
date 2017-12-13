@@ -8,17 +8,24 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
     
     @IBOutlet var newsfeed: WKInterfaceTable!
+    private var token : String?
     lazy var servide = Service(container: newsfeed)
     var posts: Root?
-    var token : String?
-    let session: URLSession = {
+    var news = [NewsWath]()
+    
+    // наш сеанс
+    private let session: WCSession = WCSession.default
+    
+    let sessionURL: URLSession = {
         let config = URLSessionConfiguration.default
         return URLSession(configuration: config)
     }()
+    
     lazy var url: URL? = {
         var components = URLComponents()
         components.scheme = "https"
@@ -35,77 +42,70 @@ class InterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        setupSession()
-    }
-    
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+        session.delegate = self
+        session.activate()
     }
     
     func setupSession() {
-       
-        self.token = ExtensionDelegate.token
-        
-        guard let url = url else {
-            assertionFailure()
-            return
-        }
+        guard let url = url else { assertionFailure(); return }
         print(url)
-        
-        session.dataTask(with: url) { [weak self] data, response, error in
-            guard let data = data else {
-                assertionFailure()
-                return
-            }
+        sessionURL.dataTask(with: url) { [weak self] data, response, error in
+            guard let data = data else { assertionFailure(); return }
             let decoder = JSONDecoder()
             
             do {
                 let result = try decoder.decode(Root.self, from: data)
-                self?.posts = result
+                self?.news = result.response.items.flatMap(){ itemNews in
+                    let text = itemNews.text ?? ""
+                    let group = result.response.groups.filter(){ $0.id == abs(itemNews.source_id) }
+                    let news = NewsWath(text: text, url: (group.first?.photo_50)!)
+                    return news
+                }
                 self?.setupTable()
             } catch {
                 print(error)
             }
             }.resume()
-
+    }
+    
+    private func showNewsfeed() {
+        guard self.token != nil else {
+            //self.showAlert(title: "Ошибка доступа", message: "Войдите в приложение на телефоне")
+            return
+        }
+        self.setupSession()
+    }
+    
+    private func showAlert(title: String?, message: String?) {
+        let closeButton = WKAlertAction(title: "Close", style: .cancel, handler: {})
+        self.presentAlert(withTitle: title, message: message, preferredStyle: .alert, actions: [closeButton])
     }
     
     func setupTable() {
-        newsfeed.setNumberOfRows((posts?.response.groups.count)!, withRowType: "NewsfeedRow")
-        for i in (posts?.response.groups.enumerated())! {
+        newsfeed.setNumberOfRows(news.count, withRowType: "NewsfeedRow")
+        for i in news.enumerated() {
             if let row = newsfeed.rowController(at: i.offset) as? NewsfeedRow {
-                row.textNews.setText(self.posts?.response.items[i.offset].text)
-                row.photoGroup.setImage(servide.photo(atIndexpath: i.offset, byUrl: (self.posts?.response.groups[0].photo_50)!))
+                row.textNews.setText(self.news[i.offset].text)
+                row.photoGroup.setImage(servide.photo(atIndexpath: i.offset, byUrl: news[i.offset].url))
             }
         }
-        
     }
 }
 
-struct Root : Codable {
-    let response: Response
+extension InterfaceController: WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        guard activationState == .activated else {
+            self.showAlert(title: "Error activation session", message: "Try again later")
+            return
+        }
+        self.showNewsfeed()
+    }
+    
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        if let token = userInfo["token"] {
+            self.token = token as? String
+            showNewsfeed()
+        }
+    }
 }
 
-struct Response: Codable {
-    let items: [Post]
-    let groups: [Source]
-}
-
-struct Post: Codable {
-    let type: String
-    let text: String?
-    let source_id: Int
-}
-
-struct Source: Codable {
-    let id: Int
-    let name: String
-    let photo_50 : String
-}

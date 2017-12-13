@@ -44,7 +44,7 @@ class MyGroupsController: UITableViewController {
         }
         
         cell.nameMyGroup.text = group.name
-        cell.avatarMyGroup?.image = PhotoService.loadPhoto(group.photoURL)
+        cell.avatarMyGroup?.image = PhotoService.loadPhoto(group.photoURL, container: self.tableView, containerCell: nil, indexPath: indexPath)
         return cell
     }
     

@@ -55,7 +55,7 @@ extension NewsCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoNewsCell", for: indexPath) as! PhotoNewsCell
         
         guard let photo = attachPhoto?[indexPath.row] else { return cell }
-        cell.photoNews.image = PhotoService.loadPhoto(photo.photoURL)
+        cell.photoNews.image = PhotoService.loadPhoto(photo.photoURL,container: nil, containerCell: self.collectionView, indexPath: indexPath)
         return cell
     }
 

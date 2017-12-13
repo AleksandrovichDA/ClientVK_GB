@@ -12,6 +12,7 @@ target 'L1_AleksandrovichDenis' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'FirebaseMessaging'
 
   # Pods for L1_AleksandrovichDenis
 

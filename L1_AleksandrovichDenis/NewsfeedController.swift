@@ -101,35 +101,9 @@ class NewsfeedController: UITableViewController, UITabBarDelegate {
         cell.viewsCount.text = String(newsfeed.viewsCount)
         cell.commentsCount.text = String(newsfeed.commentsCount)
         cell.repostsCount.text = String(newsfeed.repostsCount)
-        
-//        cell.collectionView.dataSource = self as! UICollectionViewDataSource
         cell.attachPhoto = newsfeed.attachPhoto
         cell.collectionView.reloadData()
-        cell.groupPhoto.image = PhotoService.loadPhoto(newsfeed.groupPhotoURL)
+        cell.groupPhoto.image = PhotoService.loadPhoto(newsfeed.groupPhotoURL, container: self.tableView, containerCell: nil, indexPath: indexPath)
         return cell
     }
 }
-
-//extension NewsfeedController: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 1
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoNewsCell", for: indexPath) as! PhotoNewsCell
-//
-//        guard let photo = attachPhoto?[indexPath.row] else { return cell }
-//
-//        let image = PhotoService.loadPhoto(photo.photoURL)
-//        photo.setLoadPhoto(image!)
-//        cell.photoNews.image = image
-//        return cell
-//    }
-//}
-
-
-
-
-
-
-

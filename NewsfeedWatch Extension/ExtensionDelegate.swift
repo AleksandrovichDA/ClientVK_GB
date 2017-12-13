@@ -7,25 +7,10 @@
 //
 
 import WatchKit
-import WatchConnectivity
 
 
-    static let sharedManager = ExtensionDelegate()
-    static var token = ""
-    private override init() {
-        super.init()
-        startSession()
-    }
-    
-    // наш сеанс
-     private let session: WCSession = WCSession.default
-    
-    // активация, вызывается перед первым использованием
-    func startSession() {
-        session.delegate = self
-        session.activate()
-    }
-    
+class ExtensionDelegate: NSObject, WKExtensionDelegate {
+
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
     }
@@ -81,18 +66,7 @@ import WatchConnectivity
 
 }
 
-extension ExtensionDelegate {
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print(activationState)
-    }
-    
-    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        print(userInfo)
-        if let token = userInfo["token"] {
-            ExtensionDelegate.token = token as! String
-        }
-    }
-}
+
 
 
 

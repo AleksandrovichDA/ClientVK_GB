@@ -14,6 +14,8 @@
 		920BD3741FCB17DC00CB52CB /* LastNews.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 920BD3681FCB17DC00CB52CB /* LastNews.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		920BD37D1FCB20A800CB52CB /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BD37C1FCB20A800CB52CB /* NewsViewCell.swift */; };
 		921318461F9B86640030860C /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921318451F9B86640030860C /* AsyncOperation.swift */; };
+		9226D2331FE0922C00D2DB8D /* ReloadRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9226D2321FE0922C00D2DB8D /* ReloadRow.swift */; };
+		9226D2351FE096FC00D2DB8D /* ReloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9226D2341FE096FC00D2DB8D /* ReloadCell.swift */; };
 		922DA1B81F799CC60047C8F9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DA1B71F799CC60047C8F9 /* Utils.swift */; };
 		9240A3E71F73C17D00D37F7F /* MyFrendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240A3E61F73C17D00D37F7F /* MyFrendsCell.swift */; };
 		9240A3E91F73C33600D37F7F /* MyFrendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240A3E81F73C33600D37F7F /* MyFrendsController.swift */; };
@@ -32,6 +34,7 @@
 		924BD5641FC1E16C000BA0BF /* Invitations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924BD5631FC1E16C000BA0BF /* Invitations.swift */; };
 		924BD5661FC1E265000BA0BF /* GroupsInvitations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924BD5651FC1E265000BA0BF /* GroupsInvitations.swift */; };
 		924BD5701FC362E5000BA0BF /* UITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924BD56F1FC362E5000BA0BF /* UITabBar.swift */; };
+		925842651FDF0F0B0020D7A1 /* NewsWath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925842641FDF0F0B0020D7A1 /* NewsWath.swift */; };
 		9263A8501F921A5500434668 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9263A84F1F921A5500434668 /* MessagesViewController.swift */; };
 		9271A5321F77E807008B013F /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271A5311F77E807008B013F /* VKService.swift */; };
 		928412261F9D3C52001B09E6 /* GetDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928412251F9D3C52001B09E6 /* GetDataOperation.swift */; };
@@ -165,6 +168,8 @@
 		920BD37C1FCB20A800CB52CB /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 		920BD37E1FCD8F9100CB52CB /* L1_AleksandrovichDenis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = L1_AleksandrovichDenis.entitlements; sourceTree = "<group>"; };
 		921318451F9B86640030860C /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		9226D2321FE0922C00D2DB8D /* ReloadRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadRow.swift; sourceTree = "<group>"; };
+		9226D2341FE096FC00D2DB8D /* ReloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadCell.swift; sourceTree = "<group>"; };
 		922DA1B71F799CC60047C8F9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		9240A3E61F73C17D00D37F7F /* MyFrendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFrendsCell.swift; sourceTree = "<group>"; };
 		9240A3E81F73C33600D37F7F /* MyFrendsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFrendsController.swift; sourceTree = "<group>"; };
@@ -185,6 +190,7 @@
 		924BD5631FC1E16C000BA0BF /* Invitations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitations.swift; sourceTree = "<group>"; };
 		924BD5651FC1E265000BA0BF /* GroupsInvitations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsInvitations.swift; sourceTree = "<group>"; };
 		924BD56F1FC362E5000BA0BF /* UITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBar.swift; sourceTree = "<group>"; };
+		925842641FDF0F0B0020D7A1 /* NewsWath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWath.swift; sourceTree = "<group>"; };
 		9263A84F1F921A5500434668 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		9271A5311F77E807008B013F /* VKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
 		928412251F9D3C52001B09E6 /* GetDataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataOperation.swift; sourceTree = "<group>"; };
@@ -319,6 +325,7 @@
 		921318441F9B86420030860C /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				92BE5BE81F9E95DD003F54C3 /* PhotoService.swift */,
 				921318451F9B86640030860C /* AsyncOperation.swift */,
 				928412251F9D3C52001B09E6 /* GetDataOperation.swift */,
 				928412271F9D40BC001B09E6 /* ParseData.swift */,
@@ -327,6 +334,8 @@
 				9284122F1F9DD667001B09E6 /* SetPhoto.swift */,
 				92A22F961FA129EC00E538D2 /* GetCacheImage.swift */,
 				92A22F981FA271DD00E538D2 /* SaveImageToChache.swift */,
+				9226D2321FE0922C00D2DB8D /* ReloadRow.swift */,
+				9226D2341FE096FC00D2DB8D /* ReloadCell.swift */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -429,7 +438,6 @@
 				92866BBF1F7AEB2100F1EE6A /* MyFrend.swift */,
 				92EF7EA11F7BC8E000189432 /* MyGroup.swift */,
 				92D517C01F917D70001EAB72 /* Message.swift */,
-				92BE5BE81F9E95DD003F54C3 /* PhotoService.swift */,
 				92BE5BEA1F9EA0CE003F54C3 /* NewsfeedService.swift */,
 				924BD5651FC1E265000BA0BF /* GroupsInvitations.swift */,
 			);
@@ -497,6 +505,7 @@
 				92CCABFE1FD4819200B23746 /* NewsfeedWatch Extension.entitlements */,
 				9244A12B1FD5072C00FBE677 /* LoadPhoto */,
 				92CCABE61FD4743100B23746 /* InterfaceController.swift */,
+				925842641FDF0F0B0020D7A1 /* NewsWath.swift */,
 				92CCABFB1FD478DA00B23746 /* NewsfeedRow.swift */,
 				92CCABE81FD4743100B23746 /* ExtensionDelegate.swift */,
 				92CCABEA1FD4743100B23746 /* NotificationController.swift */,
@@ -685,6 +694,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					92CB12781FCF4AEA0099B679 = {
@@ -821,6 +833,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -833,6 +846,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -917,12 +931,14 @@
 				928412261F9D3C52001B09E6 /* GetDataOperation.swift in Sources */,
 				92A22F971FA129EC00E538D2 /* GetCacheImage.swift in Sources */,
 				92D517C11F917D70001EAB72 /* Message.swift in Sources */,
+				9226D2351FE096FC00D2DB8D /* ReloadCell.swift in Sources */,
 				9240A3EB1F73C70000D37F7F /* MyGroupsController.swift in Sources */,
 				92E2458A1FBDAD160029BC6A /* LocationManger.swift in Sources */,
 				928412301F9DD667001B09E6 /* SetPhoto.swift in Sources */,
 				9240A3E91F73C33600D37F7F /* MyFrendsController.swift in Sources */,
 				92F3BF7A1FAF5C8700FD4902 /* PhotoNewsCell.swift in Sources */,
 				922DA1B81F799CC60047C8F9 /* Utils.swift in Sources */,
+				9226D2331FE0922C00D2DB8D /* ReloadRow.swift in Sources */,
 				92BD3A2B1F8EC563000F0909 /* Configuration.swift in Sources */,
 				92ADE85A1FB0F2BA007D1B1D /* UserLogin.swift in Sources */,
 				92FB7BAA1F92C5E300E6A908 /* NewsfeedController.swift in Sources */,
@@ -970,6 +986,7 @@
 			files = (
 				9244A12D1FD5075400FBE677 /* ServiceWatchKit.swift in Sources */,
 				92CCABEB1FD4743100B23746 /* NotificationController.swift in Sources */,
+				925842651FDF0F0B0020D7A1 /* NewsWath.swift in Sources */,
 				92CCABFC1FD478DA00B23746 /* NewsfeedRow.swift in Sources */,
 				92CCABE91FD4743100B23746 /* ExtensionDelegate.swift in Sources */,
 				9244A12F1FD5076900FBE677 /* AsyncOperation.swift in Sources */,
@@ -1207,12 +1224,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = L1_AleksandrovichDenis/L1_AleksandrovichDenis.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JTQM3L8Y33;
 				INFOPLIST_FILE = L1_AleksandrovichDenis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GBSWIFT.L1-AleksandrovichDenis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1225,12 +1245,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = L1_AleksandrovichDenis/L1_AleksandrovichDenis.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JTQM3L8Y33;
 				INFOPLIST_FILE = L1_AleksandrovichDenis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GBSWIFT.L1-AleksandrovichDenis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

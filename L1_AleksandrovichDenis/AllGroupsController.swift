@@ -43,7 +43,7 @@ class AllGroupsController: UITableViewController, UISearchBarDelegate {
         if isSearching {
             cell.idGroup = filterGroups[indexPath.row].id
             cell.nameGroup.text = filterGroups[indexPath.row].name
-            cell.imageGroup?.image = PhotoService.loadPhoto(filterGroups[indexPath.row].photoURL)
+            cell.imageGroup?.image = PhotoService.loadPhoto(filterGroups[indexPath.row].photoURL, container: self.tableView, containerCell: nil, indexPath: indexPath)
             cell.membersCount.text = String(filterGroups[indexPath.row].membersCount)
         }
         return cell

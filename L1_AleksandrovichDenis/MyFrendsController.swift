@@ -75,7 +75,7 @@ class MyFrendsController: UITableViewController {
         cell.lastName = frend.lastName
         cell.bigPhotoURL = frend.bigPhotoURL
         cell.name.text = frend.firstName + " " + frend.lastName
-        cell.photo?.image = PhotoService.loadPhoto(frend.smallPhotoURL)
+        cell.photo?.image = PhotoService.loadPhoto(frend.smallPhotoURL, container: self.tableView, containerCell: nil, indexPath: indexPath)
         cell.status?.text = (frend.status == 0) ? "" : "онлайн"
         cell.status?.textColor = (frend.status == 0) ? UIColor.gray : UIColor.green
         return cell
