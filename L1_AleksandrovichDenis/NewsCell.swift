@@ -16,7 +16,9 @@ class NewsCell: UITableViewCell {
     fileprivate let itemsPerRow: CGFloat = 2
     
     var attachPhoto : List<Photo>?
+    var custIndexPath: IndexPath?
     var photoArray : [UIImage] = [UIImage]()
+    weak var custTableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var groupPhoto: UIImageView!
     @IBOutlet weak var header: UILabel!
@@ -46,7 +48,7 @@ class NewsCell: UITableViewCell {
 }
 
 extension NewsCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return attachPhoto?.count ?? 0
     }
@@ -55,7 +57,9 @@ extension NewsCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoNewsCell", for: indexPath) as! PhotoNewsCell
         
         guard let photo = attachPhoto?[indexPath.row] else { return cell }
-        cell.photoNews.image = PhotoService.loadPhoto(photo.photoURL,container: nil, containerCell: self.collectionView, indexPath: indexPath)
+        var rowIndexPath = self.custIndexPath
+        
+        cell.photoNews.image = PhotoService.loadPhoto(photo.photoURL, container: self.custTableView, containerCell: nil, cellForItemAt: rowIndexPath!)
         return cell
     }
 
@@ -72,22 +76,6 @@ extension NewsCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         let widthPerItem = availableWidth / count
         
         return CGSize(width: widthPerItem, height: widthPerItem)
-        
-        
-//        guard let photo = attachPhoto?[indexPath.row] else {
-//            return CGSize(width: 0, height: 0)
-//        }
-//        let image = PhotoService.loadPhoto(photo.photoURL)
-//        //photoArray.append(image!)
-//        let width = image?.size.width ?? 150
-//        let height = image?.size.height ?? 150
-//
-//        var k : CGFloat = 0.25
-////        if let count = attachPhoto?.count, count > 1 {
-////            k = 0.25
-////        }
-//
-//        return CGSize(width: width * k, height: height * k)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
