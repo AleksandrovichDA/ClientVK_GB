@@ -101,9 +101,11 @@ class NewsfeedController: UITableViewController, UITabBarDelegate {
         cell.viewsCount.text = String(newsfeed.viewsCount)
         cell.commentsCount.text = String(newsfeed.commentsCount)
         cell.repostsCount.text = String(newsfeed.repostsCount)
+        cell.custTableView = self.tableView
+        cell.custIndexPath = indexPath
         cell.attachPhoto = newsfeed.attachPhoto
         cell.collectionView.reloadData()
-        cell.groupPhoto.image = PhotoService.loadPhoto(newsfeed.groupPhotoURL, container: self.tableView, containerCell: nil, indexPath: indexPath)
+        cell.groupPhoto.image = PhotoService.loadPhoto(newsfeed.groupPhotoURL, container: self.tableView, containerCell: nil, cellForItemAt: indexPath)
         return cell
     }
 }

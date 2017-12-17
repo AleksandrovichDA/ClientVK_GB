@@ -10,17 +10,19 @@ import UIKit
 import RealmSwift
 
 class UITabBar: UITabBarController {
-    
+    private let queryEvents = QueryEvents()
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCountBadge()
+        setBadgeTab()
+        queryEvents.getEvents(barItem: (self.tabBar.items?[2])!)
     }
     
-    func getCountBadge () {
+    func setBadgeTab() {
         do {
+            
             let realm = try Realm()
             let count = realm.objects(Invitations.self).count
-            self.tabBar.items?[2].badgeValue = (count != 0) ? String(count) : ""
+            self.tabBar.items?[2].badgeValue = (count != 0) ? String(count) : nil
         } catch {
             print(error)
         }

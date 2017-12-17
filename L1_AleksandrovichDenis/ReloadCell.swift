@@ -20,7 +20,22 @@ class ReloadCell: Operation {
     
     override func main() {
         if let _ = dependencies.first as? SetPhoto {
-            container.reloadItems(at: [indexPath])
+            
+           // container.reloadItems(at: [indexPath])
+          //  container.performBatchUpdates({
+               // container.reloadItems(at: [indexPath])
+               // for update in updates {
+                 //   switch update {
+                   // case .Add(let index):
+             //   container.insertItems(at: [indexPath])
+                     //   itemCount += 1
+                   // case .Delete(let index):
+                   //     collectionView.deleteItemsAtIndexPaths([NSIndexPath(forItem: index, inSection: 0)])
+                  //      itemCount -= 1
+                  //  }
+               // })
+           // }, completion: nil)
+        
         } else {
             return
         }
